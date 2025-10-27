@@ -1,0 +1,49 @@
+<html>
+
+
+<style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#gamearea {
+    position:relative;
+    width: 80%;
+    height: 60%;
+}
+
+#target {
+    position: absolute;
+    font-size: 50px;
+    height: auto;
+    transition: left 0.5s ease-out, top 0.5s ease-out;
+}
+
+</style>
+
+
+
+<body>
+
+    <div id="gamearea"></div>
+    <div id="target">🍖</div>
+
+    <div id="bar">
+        게임시간: <span id="timeleft">15.00</span>초
+        성공시간: <span id="successtime">0.00</span>초
+    </div>
+
+
+
+
+    <div id="result"></div>
+
+
+    <script src="3.js"></script>
+</body>
+
+
+</html>

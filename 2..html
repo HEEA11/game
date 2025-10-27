@@ -1,0 +1,190 @@
+<html>
+
+
+<style>
+
+
+body{
+    background-color: rgb(225, 219, 196);
+           
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+    margin: 0px;
+    user-select: none;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#background {
+    max-width: 100%;   
+    max-height: 100%;     
+    height: 100%;
+    width: auto;
+    position: relative; 
+
+    object-fit: cover;
+    z-index: 0;
+}
+
+#start {
+    z-index: 30;
+}
+
+.seat{
+    display: none;
+    font-size: 20px;
+
+    cursor:pointer;
+    padding : 10px;
+    cursor: pointer;
+    z-index: 25;
+
+}
+
+#seat1 {
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    transform: translate(-50%, -50%)
+
+}
+#seat2 {
+    position: absolute;
+    left: 35%;
+    top: 80%;
+    transform: translate(-50%, -50%)
+
+}
+#seat3 {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    transform: translate(-50%, -50%)
+
+}
+#seat4 {
+    position: absolute;
+    left: 55%;
+    top: 80%;
+    transform: translate(-50%, -50%)
+
+}
+#seat5 {
+    position: absolute;
+    left: 65%;
+    top: 80%;
+    transform: translate(-50%, -50%)
+
+}
+#seat6 {
+    position: absolute;
+    left: 75%;
+    top: 80%;
+    transform: translate(-50%, -50%)
+
+}
+
+
+body {
+    position: relative;        
+  width: 100vw;
+  height: 100vh;
+}
+
+#omg{
+    z-index: 100;
+    display: none;
+    position: absolute;
+    width:auto;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+ 
+}
+
+#nice{
+    z-index: 100;
+    display: none;
+    position: absolute;
+    width:auto;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+ 
+}
+
+#title {
+    z-index: 1;
+    max-width: 100%;   
+    max-height: 100%;     
+    height: auto;
+    position: absolute; /* 절대 위치 설정 */
+
+    width: 60%;
+    object-fit: cover;
+
+}
+
+#howtoplay1{
+    z-index:1;
+    position: fixed; 
+    left: 63%;
+    top: 65%;
+    width:10%;
+}
+#instruction1{
+    z-index:2;
+    
+    display:none;
+    position: fixed; 
+    left: 50%;
+    top: 50%;
+    width:60%;
+    transform: translate(-50%, -50%)
+}
+
+
+</style>
+
+
+
+<body>
+
+    <img id="title" src="title2.png">
+<img id="background" src="subway.png">
+
+
+
+<button class="seat" id="seat1">첫번째 자리</button>
+<button class="seat" id="seat2">두번째 자리</button>
+<button class="seat" id="seat3">세번째 자리</button>
+<button class="seat" id="seat4">네번째 자리</button>
+<button class="seat" id="seat5">다섯번째 자리</button>
+<button class="seat" id="seat6">여섯번째 자리</button>
+
+
+<img id="howtoplay1" src="howtoplay22.png">
+<img id="instruction1" src="instruction2.png">
+
+<img id="omg" src="omg.png">
+<img id="nice" src="nice.png">
+
+<script src="2.js"></script>
+
+</body>
+
+
+
+
+
+
+</html>
