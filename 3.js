@@ -27,7 +27,7 @@ function movetarget () {
     const newY = Math.floor(Math.random() * maxY);
 
     target.style.left = `${newX}px`;
-        target.style.top = `${newY}px`;
+    target.style.top = `${newY}px`;
 
 }
 
@@ -46,6 +46,9 @@ target.addEventListener('mouseleave', () => {
 const moveInterval = setInterval(movetarget, targetmove);
 
 
+
+
+
 // 시간계산
 const timer = setInterval(() => {
 
@@ -61,6 +64,8 @@ const timer = setInterval(() => {
 
 
 
+
+// 시간제한, 승패구현
 const gametimer = setInterval(() => {
  
 
