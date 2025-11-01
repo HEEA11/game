@@ -48,6 +48,29 @@ const moveInterval = setInterval(movetarget, targetmove);
 
 
 
+//------------------------터치구현-------------------------//
+
+
+//터치 상태 감지
+let touchover = false;
+
+target.addEventListener('touchstart', (e) => {
+    touchover = true;
+    });
+
+    target.addEventListener('touchmove', (e) => {
+        touchover = true;
+        });
+
+target.addEventListener('touched', () => {
+    touchover = false;
+    });
+
+moveInterval;
+
+
+
+
 
 // 시간계산
 const timer = setInterval(() => {
@@ -58,6 +81,14 @@ const timer = setInterval(() => {
     }
 
     successtime.textContent = mousemove.toFixed(2);
+
+
+    if (touchover) {
+        mousemove = Math.min(mousemove +0.1, totalgametime);
+    }
+
+    successtime.textContent = mousemove.toFixed(2);
+
 
 }, 100);
 
@@ -90,6 +121,13 @@ const gametimer = setInterval(() => {
         timeleft.textContent = "0.00";
     }
 }, 1000);
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 const start = document.getElementById('title');
 const background = document.getElementById('background');
-const howtoplay1 = document.getElementById('howtoplay1');
+
 const instruction1 = document.getElementById('instruction1');
 
 const all = document.querySelectorAll('.seat')
@@ -36,29 +36,27 @@ let computerchoice = null ;    // 이것도 전역에서
 
 
 start.addEventListener('click', () => {
+    instruction1.style.display= 'block';
     background.src = "subway2.png"
     start.remove();
     howtoplay1.remove();
 
-
-//3초뒤 실행하기 
-setTimeout(showbutton, 3000); 
-
 });
 
-howtoplay1.addEventListener('click', () => {
 
 
-    instruction1.style.display= 'block';
-    
-    });
     
 instruction1.addEventListener('click', () => {
     
     
         instruction1.style.display= 'none';
-        
+
+        //3초뒤 실행하기 
+        setTimeout(showbutton, 3000); 
+
         });
+        
+        
         
 
 

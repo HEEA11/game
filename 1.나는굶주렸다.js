@@ -97,8 +97,8 @@ function updateTimer() {
         const secondresult = document.createElement("img");
         secondresult.src = "secondresult.png";
         secondresult.style.position = "absolute";
-        secondresult.style.width = "300px";
-        secondresult.style.height = "auto";
+        secondresult.style.width = "auto";
+        secondresult.style.height = "70%";
         secondresult.style.top = "50%";
         secondresult.style.left = "50%";
         secondresult.style.transform = "translate(-50%, -50%)"; // 정확한 중앙 정렬
@@ -110,8 +110,8 @@ function updateTimer() {
         const thirdresult = document.createElement("img");
         thirdresult.src = "thirdresult.png";
         thirdresult.style.position = "absolute";
-        thirdresult.style.width = "outo";
-        thirdresult.style.height = "100%";
+        thirdresult.style.width = "auto";
+        thirdresult.style.height = "70%";
         thirdresult.style.top = "50%";
         thirdresult.style.left = "50%";
         thirdresult.style.transform = "translate(-50%, -50%)"; // 정확한 중앙 정렬
@@ -168,7 +168,7 @@ const totalitem = 50;
 
     newimg.src = "item.png";
     newimg.style.position = "absolute";
-    newimg.style.width = `7%`;
+    newimg.style.width = `5%`;
 
     newimg.style.left = `${x}px`;
     newimg.style.top = `${y}px`;
@@ -319,7 +319,7 @@ function create6 () {
 
             obstacle.src = "item6.png";
             obstacle.style.position = "absolute";
-            obstacle.style.height = '5%';
+            obstacle.style.height = '4%';
             obstacle.style.left = `${x}px`;
             obstacle.style.top = `${y}px`;
             obstacle.style.zIndex = 50;
