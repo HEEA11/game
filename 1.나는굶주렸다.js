@@ -168,7 +168,7 @@ const totalitem = 50;
 
     newimg.src = "item.png";
     newimg.style.position = "absolute";
-    newimg.style.width = `2%`;
+    newimg.style.width = `7%`;
 
     newimg.style.left = `${x}px`;
     newimg.style.top = `${y}px`;
@@ -273,7 +273,7 @@ function create4 () {
 
             obstacle.src = "item4.png";
             obstacle.style.position = "absolute";
-            obstacle.style.height = '5%';
+            obstacle.style.height = '3%';
             obstacle.style.left = `${x}px`;
             obstacle.style.top = `${y}px`;
             obstacle.style.zIndex = 50;
@@ -887,7 +887,7 @@ function create30 () {
 
 
 //--------------------본격시작--------------------
-
+document.addEventListener('DOMContentLoaded', function() {
 start.addEventListener('click', () => {
     start.remove();
     howtoplay1.remove();
@@ -928,6 +928,7 @@ start.addEventListener('click', () => {
 
 
 
+});
 });
 
 howtoplay1.addEventListener('click', () => {
