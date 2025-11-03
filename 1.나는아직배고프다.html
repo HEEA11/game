@@ -3,7 +3,7 @@
 
 <style>
     html, body {
-        overflow: hidden;
+    overflow: hidden;
     margin: 0px;
     user-select: none;
     width: 100%;
@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: rgb(154, 147, 118);
+
     position: relative;        
   width: 100vw;
   height: 100vh;
@@ -39,7 +39,6 @@ body {
     height: 100%;
     width: 100%;
     position: absolute; 
-
     object-fit: cover;
     z-index: 1;
 
@@ -117,13 +116,35 @@ body {
     position: fixed; 
     left: 50%;
     top: 50%;
-    width:60%;
+    width:70%;
     transform: translate(-50%, -50%)
 }
 
 #title {
     width: 100%;
 }
+
+
+#homebutton {
+    position:absolute;
+   
+    top: 80%;
+    left: 60%;
+    
+
+    transform: translate(-50%, -50%); 
+
+
+    display: block;
+    z-index: 50;
+
+}
+
+#homebutton img {
+    width: 50%;
+
+}
+
 
 </style>
 
@@ -146,11 +167,17 @@ body {
 
 <img id="title" src="title1.png">
 
-<img id="howtoplay1" src="howtoplay1.png">
+
 <img id="instruction1" src="instruction.png">
 
 
 
+
+<div id="homebutton">
+    <a href="index.html">
+        <img src="firsthome.png">
+    </a>
+</div>
 
 
 

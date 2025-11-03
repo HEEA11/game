@@ -1,3 +1,4 @@
+
 const start = document.getElementById('title');
 const howtoplay1 = document.getElementById('howtoplay1');
 const instruction1 = document.getElementById('instruction1');
@@ -94,8 +95,8 @@ function updateTimer() {
         document.body.appendChild(firstresult);
     }
     if (currentscore>=30 && currentscore<45) {
-        const secondresult = document.createElement("img");
-        secondresult.src = "secondresult.png";
+        const firstresult = document.createElement("img");
+        secondresult.src = "firstresult.png";
         secondresult.style.position = "absolute";
         secondresult.style.width = "auto";
         secondresult.style.height = "70%";
@@ -104,7 +105,7 @@ function updateTimer() {
         secondresult.style.transform = "translate(-50%, -50%)"; // 정확한 중앙 정렬
         secondresult.style.zIndex = 100; // 다른 요소 위에 표시
         secondresult.id = 'resultImage'; 
-        document.body.appendChild(secondresult);
+        document.body.appendChild(firstresult);
     }
     if (currentscore>0 && currentscore<30) {
         const thirdresult = document.createElement("img");
@@ -887,10 +888,31 @@ function create30 () {
 
 
 //--------------------본격시작--------------------
+
 document.addEventListener('DOMContentLoaded', function() {
+
 start.addEventListener('click', () => {
     start.remove();
-    howtoplay1.remove();
+    instruction1.style.display= 'block';
+    homebutton.style.display = 'none';
+
+   
+
+
+});
+});
+
+
+
+
+
+
+instruction1.addEventListener('click', () => {
+
+
+    instruction1.style.display= 'none';
+
+
 
     intervalId = setInterval(updateTimer, 10);        // 10밀리초 간격으로 updateTimer 함수 실행
     createmeat();
@@ -926,23 +948,6 @@ start.addEventListener('click', () => {
     create30();
  
 
-
-
-});
-});
-
-howtoplay1.addEventListener('click', () => {
-
-
-instruction1.style.display= 'block';
-
-});
-
-instruction1.addEventListener('click', () => {
-
-
-    instruction1.style.display= 'none';
-    
     });
     
 

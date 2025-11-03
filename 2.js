@@ -2,6 +2,7 @@ const start = document.getElementById('title');
 const background = document.getElementById('background');
 
 const instruction1 = document.getElementById('instruction1');
+const homebutton = document.getElementById('homebutton');
 
 const all = document.querySelectorAll('.seat')
 const seat1 = document.getElementById('seat1');
@@ -37,6 +38,8 @@ let computerchoice = null ;    // 이것도 전역에서
 
 start.addEventListener('click', () => {
     instruction1.style.display= 'block';
+    homebutton.style.display = 'none';
+
     background.src = "subway2.png"
     start.remove();
     howtoplay1.remove();
@@ -134,10 +137,6 @@ function mypick(event) {
 
 
 
-    if (!computerchoice) {
-        console.error("오류: 컴퓨터 선택이 아직 결정되지 않았습니다.");
-        return;
-    }
 
 
 if (mychoice===seat1 && computerchoice===seat1) {
@@ -196,6 +195,8 @@ if (mychoice===seat1 && computerchoice===seat1) {
       setTimeout(() => {
          
           omg.style.display ='block';
+          homebutton.style.display = 'block';
+
           }, 3000);
       
 
@@ -207,6 +208,7 @@ if (mychoice===seat1 && computerchoice===seat1) {
         setTimeout(() => {
        
             nice.style.display = 'block';
+            homebutton.style.display = 'block';
             }, 3000);
     }else if(mychoice===seat1 && computerchoice===seat3) {
         background.src = "1-3.PNG"
