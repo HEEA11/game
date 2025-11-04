@@ -78,10 +78,9 @@ function updateTimer() {
 
   
 
-
     
     //------------승패판단---------------
-    if (currentscore>=45) {
+    if (currentscore>=30) {
         const firstresult = document.createElement("img");
         firstresult.src = "firstresult.png";
         firstresult.style.position = "absolute";
@@ -92,19 +91,6 @@ function updateTimer() {
         firstresult.style.transform = "translate(-50%, -50%)"; // 정확한 중앙 정렬
         firstresult.style.zIndex = 100; // 다른 요소 위에 표시
         firstresult.id = 'resultImage'; 
-        document.body.appendChild(firstresult);
-    }
-    if (currentscore>=30 && currentscore<45) {
-        const firstresult = document.createElement("img");
-        secondresult.src = "firstresult.png";
-        secondresult.style.position = "absolute";
-        secondresult.style.width = "auto";
-        secondresult.style.height = "70%";
-        secondresult.style.top = "50%";
-        secondresult.style.left = "50%";
-        secondresult.style.transform = "translate(-50%, -50%)"; // 정확한 중앙 정렬
-        secondresult.style.zIndex = 100; // 다른 요소 위에 표시
-        secondresult.id = 'resultImage'; 
         document.body.appendChild(firstresult);
     }
     if (currentscore>0 && currentscore<30) {
@@ -120,6 +106,8 @@ function updateTimer() {
         thirdresult.id = 'resultImage'; 
         document.body.appendChild(thirdresult);
     }
+
+    const resultImage = document.getElementById('resultImage');
 
     if (resultImage) {
         resultImage.addEventListener('click', () => {

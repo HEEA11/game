@@ -9,6 +9,7 @@ const instruction1 = document.getElementById('instruction1');
 
 const success = document.getElementById('success');
 const fail = document.getElementById('fail');
+const following = document.getElementById('following');
 
 const totalgametime = 15;
 const wintime=1;
@@ -65,6 +66,21 @@ target.addEventListener('mouseleave', () => {
 
 
 ///--------------노션 정리 할 것--------------//
+
+
+
+//터치 좌표 따라다니기
+document.addEventListener('touchmove', (e) => {
+
+    e.preventDefault(); 
+    
+    const X = e.touches[0].clientX;
+    const Y = e.touches[0].clientY;
+
+    following.style.left = X + 'px';
+    following.style.top = Y + 'px';
+}, { passive: false });
+
 
     window.addEventListener('touchstart', (e) => { 
    
