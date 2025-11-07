@@ -2,20 +2,24 @@
 const start = document.getElementById('title');
 const howtoplay1 = document.getElementById('howtoplay1');
 const instruction1 = document.getElementById('instruction1');
-
+const homebutton = document.getElementById('homebutton');
 const timer = document.getElementById('timer');
 const container = document.getElementById("imagecontainer")
 const following = document.getElementById('following');
 const current = document.getElementById('current');
 const background = document.getElementById('background');
-const all = document.querySelectorAll('items');
-const obstacle = document.querySelectorAll('obstacle');
+
+
+
+
 
 let intervalId = null;
 let initialtime = 30000;    // 초기 시간 30초
 
-
-
+//점수카운트
+let currentscore = 0;
+const total = 50;
+const totalitem = 50; 
 
 
 
@@ -117,19 +121,10 @@ function updateTimer() {
 }    }
 
 
-//점수카운트
-let currentscore = 0;
-const total = 50;
 
 
 
-//배경크기 계ㅅ산
 
-    const backgroundRect = background.getBoundingClientRect();
-    const bgx = backgroundRect.left;
-    const bgy = backgroundRect.top;
-    const bgwidth = backgroundRect.width;
-    const bgheight = backgroundRect.height;
     
 
 
@@ -140,11 +135,11 @@ const total = 50;
 
 //랜덤하게 50개 고기가 생성 
 const img = document.getElementById('item');
-const totalitem = 50; 
 
 
 
-    function createmeat () {
+
+function createmeat(){
 
     document.querySelectorAll('.meat').forEach(item => item.remove());
     for (let i=0; i<totalitem; i++) {
@@ -217,7 +212,16 @@ function createitems () {
 
 //--------------------본격시작--------------------
 
+
+//배경크기 계ㅅ산
 document.addEventListener('DOMContentLoaded', function() {
+    
+    const backgroundRect = background.getBoundingClientRect();
+    bgx = backgroundRect.left;
+    bgy = backgroundRect.top;
+    bgwidth = backgroundRect.width;
+    bgheight = backgroundRect.height;
+
 
 start.addEventListener('click', () => {
     start.remove();
@@ -248,5 +252,6 @@ instruction1.addEventListener('click', () => {
     createitems();
  
 
-    });
+
     
+} );
