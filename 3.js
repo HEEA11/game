@@ -82,6 +82,9 @@ document.addEventListener('touchmove', (e) => {
 }, { passive: false });
 
 
+
+
+
     window.addEventListener('touchstart', (e) => { 
    
 
@@ -131,7 +134,7 @@ document.addEventListener('touchmove', (e) => {
     }, { passive: false });
 
 
-    // 🌟🌟🌟 [모바일] 터치 종료 🌟🌟🌟
+//터치종료
     window.addEventListener('touchend', () => { 
         // 손가락을 떼면 무조건 충돌 상태 해제
         mouseover = false; 

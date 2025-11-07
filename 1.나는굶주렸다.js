@@ -45,10 +45,10 @@ function time(totalMs) {
     const milliseconds = totalMs % 100;    // 나머지 밀리초를 계산해서 세자리로 표시
 
 
-    const formattedSeconds = String(seconds).padStart(2, '0');                     //두자리 초 
-    const formattedMilliseconds = String(milliseconds).padStart(2, '0');           //세자리 밀리초
+    const setseconds = String(seconds).padStart(2, '0');                     //두자리 초 
+    const setmilliseconds = String(milliseconds).padStart(2, '0');           //세자리 밀리초
 
-    return `${formattedSeconds}:${formattedMilliseconds}`;
+    return `${setseconds}:${setmilliseconds}`;
 
 };
 
@@ -118,7 +118,7 @@ function updateTimer() {
 
 
 //점수카운트
-let currentscore = 1;
+let currentscore = 0;
 const total = 50;
 
 
@@ -938,9 +938,3 @@ instruction1.addEventListener('click', () => {
 
     });
     
-
-
-
-
-
-
